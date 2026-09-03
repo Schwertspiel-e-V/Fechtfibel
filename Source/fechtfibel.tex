@@ -1,9 +1,10 @@
-\documentclass[10pt,a4paper,twoside]{scrartcl}
+\documentclass[10pt,a4paper]{scrartcl}
 
-%german language support
-\usepackage[T1, EU1]{fontenc} % Output font encoding for international characters
-\usepackage[utf8] {inputenc} %inpunencoding for QOL
-\usepackage[ngerman]{babel} %language support
+% german language support
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
 
 %graphix & colour
 \usepackage{graphicx}
@@ -32,8 +33,6 @@
    \foreach \n in {1,...,#2}\draw(0 ,-#1*\n )--(\linewidth,-#1*\n ); 
   \end{tikzpicture}}
 
-
-
 \title{Fechtfibel}
 \author{Schwertspiel: Verein für traditionelle Kampfkunst in Dresden}
 
@@ -44,8 +43,7 @@
 \setlength{\LTpost}{0pt}
 %\setting longtable dimensions
 
-\null
-\thispagestyle{empty}
+\maketitle
 \newpage
 
 \section*{Vorwort}
@@ -120,7 +118,7 @@ Dies sollte sich auch im Umgang miteinander zeigen. Kommentare, die andere bewer
 \\
 Das Training gibt die Möglichkeit, Fehler zuzugeben, Fragen zu stellen und gemeinsam besser zu werden.
 
-\subsubsection*{V.	Du trägst dazu bei, dass Andere vorankommen!}
+\subsubsection*{V.  Du trägst dazu bei, dass Andere vorankommen!}
 
 Fechten lernt man nicht allein. Gute und kooperative Trainingspartner:innen sind eine der wichtigsten Voraussetzungen für Fortschritt.
 \\
@@ -229,14 +227,14 @@ Es folgen einige Hinweise für die Ausrüstungswahl. Produktempfehlungen gibt es
 \subsubsection*{Schuhe}
 
 \begin{itemize}
-    \item 	abriebfreie Hallenschuhe, möglichst mit heller Sohle und abgerundeten Hacken (aus modernem Fechtsport, Ringen oder anderen Hallensportarten)
+    \item   abriebfreie Hallenschuhe, möglichst mit heller Sohle und abgerundeten Hacken (aus modernem Fechtsport, Ringen oder anderen Hallensportarten)
 \end{itemize}
 
 \subsubsection*{Fechtmaske}
 
 \begin{itemize}
-    \item	FIE 1600N Zertifizierung, Niveau 2
-    \item	Passform: Die Maske sollte unter dem Kinn eng anliegen, aber nicht schmerzhaft sein; Masken sind begrenzt verformbar, um sie individuell anzupassen.
+    \item   FIE 1600N Zertifizierung, Niveau 2
+    \item   Passform: Die Maske sollte unter dem Kinn eng anliegen, aber nicht schmerzhaft sein; Masken sind begrenzt verformbar, um sie individuell anzupassen.
     \item   Masken sollten ein Stirnband als Schutz gegen das Hineinrutschen ins Schutzgitter besitzen.
     \item   Das Unterziehen einer Polsterhaube aus dem Rugby ist möglich (mehr Schutz bei harten Treffern, eventuell größere Maske nötig).
 \end{itemize}
@@ -298,7 +296,7 @@ Hier kann man wirklich viel falsch machen: Fragt unbedingt eure Trainer:innen! W
     \item Achtung: Stichfestigkeit sagt nichts über Polsterwirkung gegen stumpfe Gewalteinwirkung aus! Zusätzliche Protektoren und ein Plastron sind hierfür notwendig.
     \item Jacken mit guter Polsterung sind häufig schwer und schränken Beweglichkeit und Wärmeableitung ein. Schutz, Beweglichkeit und Wärmeabführung müssen abgewogen werden!
     \item Es gibt Jacken mit eingebauten Schutzelementen. Vorteile: kein mühsames Anlegen der Extrapanzerung, kein Abschnüren von Gliedmaßen durch Klettverschlüsse; Nachteile: möglicherweise unflexibel im Schutzgrad (nicht bei allen Übungen wird volle Rüstung gewünscht), bei Beschädigung schwer austauschbar
-    \item 	Jacken sollten waschbar sein!
+    \item   Jacken sollten waschbar sein!
 \end{itemize}
 
 \subsubsection*{Hinterkopfschutz/Maskenüberzug}
@@ -1401,7 +1399,7 @@ Stücke und Schwerpunkte:
     \item Durchlaufen unter dem Arm
     \item Rad (Auerswald 14r) Trapp (15r) , gewinlich Tritt (17r),
 \end{itemize}
-	
+    
 \newpage
 \null
 \thispagestyle{empty}
