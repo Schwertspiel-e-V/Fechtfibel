@@ -1,48 +1,48 @@
-\documentclass[10pt,a4paper]{scrartcl}
+\documentclass[10pt, a4paper]{scrartcl}
 
-%german language support
+% Language and typography
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
 \usepackage{lmodern}
 \usepackage[ngerman]{babel}
 
-%graphix & colour
+% Graphics and colours
 \usepackage{graphicx}
 \graphicspath{{Images/}}
-\usepackage{color}
+\usepackage{xcolor}
+\usepackage{tikz}
 
-\usepackage{enumerate} %roman numeral enumeration
+% Tables and lists
+\usepackage{longtable}
+\setlongtables
+\setlength{\LTpre}{5pt}
+\setlength{\LTpost}{0pt}
+\usepackage{multicol}
+\usepackage{enumerate}
 
-%fancy headers
-\usepackage{fancyhdr} % Required for modifying headers and footers
+% Float placement
+\usepackage{placeins}
+
+% Headers and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
 \fancyhead[L]{\textsf{\rightmark}} % Top left header
 \fancyhead[R]{\textsf{\leftmark}} % Top right header
-\renewcommand{\headrulewidth}{1.4pt} % Rule under the header
 \fancyfoot[C]{\textbf{\textsf{\thepage}}} % Bottom center footer
+\renewcommand{\headrulewidth}{1.4pt} % Rule under the header
 \renewcommand{\footrulewidth}{1.4pt} % Rule under the footer
-\pagestyle{fancy} % Use the custom headers and footers throughout the document
 
-\usepackage{longtable}
-\usepackage{placeins}
-\usepackage{multicol} % Required for splitting text into multiple columns
+% Custom commands
+\newcommand{\liniert}[2][0.5cm]{
+    \begin{tikzpicture}[gray]
+        \path[use as bounding box](0,0)rectangle(\linewidth,-#2*#1-0.5\pgflinewidth);
+        \foreach \n in {1,...,#2}\draw(0 ,-#1*\n )--(\linewidth,-#1*\n );
+    \end{tikzpicture}}
 
-%custom command
-\usepackage{tikz}
-\newcommand{\liniert}[2][0.5cm]{% 
-  \begin{tikzpicture}[gray]
-  \path[use as bounding box](0,0)rectangle(\linewidth,-#2*#1-0.5\pgflinewidth); 
-   \foreach \n in {1,...,#2}\draw(0 ,-#1*\n )--(\linewidth,-#1*\n ); 
-  \end{tikzpicture}}
-
+% Document metadata
 \title{Fechtfibel}
 \author{Schwertspiel: Verein für traditionelle Kampfkunst in Dresden}
 
 \begin{document}
-
-\setlongtables
-\setlength{\LTpre}{5pt}
-\setlength{\LTpost}{0pt}
-%\setting longtable dimensions
 
 \maketitle
 
@@ -572,7 +572,7 @@ Der Abstand zum:zur Gegner:in wird allgemein als ''Mensur'' bezeichnet. Bestimmt
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[scale=.075]{Weite2.jpg}
+    \includegraphics[scale=.05]{Weite2.jpg}
     \caption{Die Zufechtmensur}
     \label{fig:Zufechtmensur}
 \end{figure}
@@ -609,7 +609,7 @@ Das Gegenüber ist ohne Schritt erreichbar. Hier geschieht die Bindungsarbeit.
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[scale=.075]{Eng1.jpg}
+    \includegraphics[scale=.05]{Eng1.jpg}
     \caption{Das Armringen}
     \label{fig:Armringen}
 \end{figure}
@@ -622,7 +622,7 @@ Man erreicht mit der eignen Hand die Arme des Gegenübers. Armringen und Schwert
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[scale=.075]{Ringe1.jpg}
+    \includegraphics[scale=.05]{Ringe1.jpg}
     \caption{Das Leibringen}
     \label{fig:Leibringen}
 \end{figure}
