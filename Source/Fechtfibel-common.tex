@@ -1,5 +1,3 @@
-\documentclass[10pt, a4paper]{scrartcl}
-
 % Language and typography
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
@@ -22,6 +20,9 @@
 % Float placement
 \usepackage{placeins}
 
+% Layout and margins
+\usepackage[pass]{geometry}
+
 % Headers and footers
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -41,12 +42,14 @@
 % Document metadata
 \title{Fechtfibel}
 \author{Schwertspiel: Verein für traditionelle Kampfkunst in Dresden}
+\date{\today}
 
 \begin{document}
 
-\maketitle
+\VariantTitlePage
 
 \newpage
+\setcounter{page}{1}
 
 \section*{Vorwort}
 
@@ -783,13 +786,10 @@ Beschreibt den entscheidenden Moment, der die Ausführung des Stückes initiiert
 \subsubsection*{III.Ausführung}
 
 Beschreibt die eigentliche Ausführung des Stücks: Diese soll in der Gruppe anhand der fechterischen Grundprinzipien ausführlich besprochen werden. Dies geschieht anhand von „Show and Tell“ durch die Fechter:innen im Dialog mit dem:der Trainer:in. Diese:r wirft das Augenmerk auf Mensur, Beinarbeit, Schwerthaltung und auf Beachtung der fechterischen Grundprinzipien.
- \\
- \\
- Schließlich wird die gefundene Interpretation noch einmal von den Trainer:innen vorgeführt. Anschließend haben die Fechter:innen in den folgenden Trainingseinheiten die Möglichkeit ihre persönliche Interpretation zu finden und zu festigen. Der Fokus der Übungen sollte Anfangs mehr auf dem Konditionieren des Auslösers liegen. Statische Übungen können dann genutzt werden bis alle Fechter:innen eine saubere Ausführung beherrschen. Anschließend wird der Auslöser in dynamischen Übungen wieder in den Fokus gesetzt. Schließlich kann das Fechtstück in offeneren dynamischen Übungen zusammen mit anderen Stücken in einen größeren Kontext gesetzt werden.
+\\
+\\
+Schließlich wird die gefundene Interpretation noch einmal von den Trainer:innen vorgeführt. Anschließend haben die Fechter:innen in den folgenden Trainingseinheiten die Möglichkeit ihre persönliche Interpretation zu finden und zu festigen. Der Fokus der Übungen sollte Anfangs mehr auf dem Konditionieren des Auslösers liegen. Statische Übungen können dann genutzt werden bis alle Fechter:innen eine saubere Ausführung beherrschen. Anschließend wird der Auslöser in dynamischen Übungen wieder in den Fokus gesetzt. Schließlich kann das Fechtstück in offeneren dynamischen Übungen zusammen mit anderen Stücken in einen größeren Kontext gesetzt werden.
 
-\newpage
-\null
-\thispagestyle{empty}
 \newpage
 
 \section{Fechtkanon}

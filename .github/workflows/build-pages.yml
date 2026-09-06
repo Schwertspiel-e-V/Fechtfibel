@@ -33,26 +33,24 @@ jobs:
             texlive-lang-german \
             latexmk
 
-      - name: Build PDF
-        working-directory: Source
-        run: |
-          mkdir -p ../Output
-          latexmk -pdf -interaction=nonstopmode -halt-on-error \
-            -outdir=../Output Fechtfibel.tex
+      - name: Build PDFs
+        run: python build.py
 
       - name: Prepare Pages
         run: |
-          mkdir public
-          cp Output/Fechtfibel.pdf public/Fechtfibel.pdf
+          mkdir -p public
+          cp Output/Fechtfibel-screen.pdf public/Fechtfibel-screen.pdf
+          cp Output/Fechtfibel-paper.pdf public/Fechtfibel-paper.pdf
           cat > public/index.html <<'EOF'
           <!DOCTYPE html>
           <html>
             <head>
-              <meta http-equiv="refresh" content="0; url=Fechtfibel.pdf">
               <title>Fechtfibel</title>
             </head>
             <body>
-              <p><a href="Fechtfibel.pdf">Fechtfibel öffnen</a></p>
+              <h1>Fechtfibel</h1>
+              <p><a href="Fechtfibel-screen.pdf">Screen version</a></p>
+              <p><a href="Fechtfibel-paper.pdf">Paper version</a></p>
             </body>
           </html>
           EOF
