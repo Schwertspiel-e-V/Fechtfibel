@@ -1,0 +1,188 @@
+\VariantDocumentClass
+
+% Language and typography
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+
+% Graphics and colours
+\usepackage{graphicx}
+\graphicspath{{Images/}}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+% Tables and lists
+\usepackage{longtable}
+\setlongtables
+\setlength{\LTpre}{5pt}
+\setlength{\LTpost}{0pt}
+\usepackage{multicol}
+\usepackage{enumerate}
+
+% Float placement
+\usepackage{placeins}
+
+% Layout and margins
+\usepackage[pass]{geometry}
+
+% Headers and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[L]{\textsf{\rightmark}} % Top left header
+\fancyhead[R]{\textsf{\leftmark}} % Top right header
+\fancyfoot[C]{\textbf{\textsf{\thepage}}} % Bottom center footer
+\renewcommand{\headrulewidth}{1.4pt} % Rule under the header
+\renewcommand{\footrulewidth}{1.4pt} % Rule under the footer
+
+% Custom commands
+\newcommand{\liniert}[2][0.5cm]{
+    \begin{tikzpicture}[gray]
+        \path[use as bounding box](0,0)rectangle(\linewidth,-#2*#1-0.5\pgflinewidth);
+        \foreach \n in {1,...,#2}\draw(0 ,-#1*\n )--(\linewidth,-#1*\n );
+    \end{tikzpicture}}
+
+% Document metadata
+\title{Fechtfibel}
+\author{Schwertspiel: Verein für traditionelle Kampfkunst in Dresden}
+\date{\today}
+
+\begin{document}
+
+\VariantTitlePage
+
+\newpage
+\setcounter{page}{1}
+
+\section*{Vorwort}
+
+Die nachfolgenden Ausführungen dienen als Begleitlektüre für das Training im historischen Fechten mit dem langen Schwert bei Schwertspiel e.V., Verein für traditionelle Kampfkunst in Dresden. Sie richtet sich an alle Mitglieder des Vereins, besonders an die Teilnehmer:innen des Anfängertrainings.
+\\
+\\
+Die Fechtfibel enthält grundlegende Leitlinien für ein konstruktives und respektvolles gemeinsames Fechten und Lernen, sowie grundlegendes Wissen zu Ausrüstung, Quellen und Fachvokabular. Das Kernstück bildet eine Auswahl an Fechtstücken, die in einem Lernkanon zusammengestellt wurden, um die wesentlichen Grundprinzipien des Fechtens zu verdeutlichen. Die dargestellten Stücke stellen deshalb kein vollständiges historisches Fechtbuch dar, und sind verschiedenen Quellen entlehnt.
+\\
+\\
+Wir  freuen uns über konstruktive Kritik und wünschen viel Spaß beim Fechten.
+\\
+\\
+\begin{center}
+Die Autoren
+\end{center}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+ 
+\input{Fechtfibel-basics.tex}
+
+\input{Fechtfibel-canon.tex}
+
+\section{Anhang}
+
+\subsection{Nützliche Links}\label{Nützliche Links}
+
+\begin{itemize}
+    \item \textbf{Wiktenauer}, Onlinesammlung von Fechtbüchern inklusive Transkriptionen und Übersetzungen
+    \\
+    \\
+    Link: wiktenauer.com
+    \item \textbf{DDHF}, Webseite des deutschen Dachverbandes für historisches Fechten, enthält Turnierregelwerke, Zugang zur DDHF-Bildungsplattform und dem DDHF-Forschungsforum
+    \\
+    \\
+    Link: ddhf.de
+    \item \textbf{DDHF Forschungsforum}
+    \\
+    \\
+    Link: https://ddhf.de/ddhf-forschungsforum
+    \item \textbf{Transkription und Übersetzung des 44A8} von Dierk Hagedorn.
+    \\
+    \\
+    Link: https: www.hammaborg.de/de/transkriptionen/peter\_von\_danzig/
+    \item \textbf{KdiH}, der Katalog der deutschsprachigen illustrierten Handschriften
+    \\
+    \\
+    Link: https://kdih.badw.de/datenbank/stoffgruppe/38
+    \item \textbf{Datenbank mit Kampfbuchsammlung bis 1600} von Eric Burkart
+    \\
+    \\
+    Link: https://fightbooks.uni-trier.de
+\end{itemize}
+
+\newpage
+
+\subsection{Quellen}
+
+\subsubsection*{Glossen, Transkriptionen \& Übersetzungen}
+
+\begin{itemize}
+    \item \textbf{Glossen zum langen Schwert} nach dem "Cod. 44 A 8"\ in der "Biblioteca dell’Accademia Nazionale dei Lincei e Corsiniana", Rom
+    \\ Anonymer Autor
+    \item \textbf{Transkription und Übersetzung zum langen Schwert} nach Dierk Hagedorn, siehe \ref{Nützliche Links}
+    \item \textbf{Stück zum Aufstreichen} nach ''E.1939.65.357'', ''Ergrundung Ritterlicher Kunst der Fechterey'' (1516)
+    \\ von Andre Paurenfeyndt
+    \item \textbf{Glossen zum Ringen} nach Göttingen, Staats- und Universitätsbibliothek, 2° Cod. Ms. philos. 62
+    \\ von Fabian von Auerswald
+    \item \textbf{Transkriptionen zum Ringen} nach Thore Wilkins
+\end{itemize}
+
+\newpage
+
+\subsubsection*{Bildquellen}
+
+Schwertspiel e.V., Verein für traditionelle Kampfkunst in Dresden:
+\begin{longtable}{p{6.25cm}p{6.25cm}}
+\begin{itemize}
+    \item Abbildung 1: Die Nomenklatur des Schwertes
+    \item Abbildung 2: Hammergriff
+    \item Abbildung 3: Daumengriff
+    \item Abbildung 4: links
+    \item Abbildung 5: frontal
+    \item Abbildung 6: rechts
+    \item Abbildung 7: links
+    \item Abbildung 8: frontal
+    \item Abbildung 9: rechts
+    \item Abbildung 10: Ochs rechts
+    \item Abbildung 11: Ochs rechts
+    \item Abbildung 12: Ochs rechts
+    \item Abbildung 13: Ochs links
+\end{itemize}
+
+&
+
+\begin{itemize}
+    \item Abbildung 14: Ochs links
+    \item Abbildung 15: Ochs links
+    \item Abbildung 16: links
+    \item Abbildung 17: frontal
+    \item Abbildung 18: rechts
+    \item Abbildung 22: Die Zufechtmensur
+    \item Abbildung 23: Eintritt in die Kriegsmensur
+    \item Abbildung 24: Austritt aus der Kriegsmensur
+    \item Abbildung 25: Das Armringen
+    \item Abbildung 26: Das Leibringen
+    \item Oberhau
+    \item Unterhau
+    \item Unterschnitt
+\end{itemize}
+\end{longtable}
+\hspace{3cm}
+
+Wiktenauer, siehe \ref{Nützliche Links}:
+
+\begin{longtable}{p{6.25cm}p{6.25cm}}
+\begin{itemize}
+    \item Abbildung 19: Vom Tag und Alber
+    \item Abbildung 20: Ochs und Pflug
+    \item Abbildung 21: Darstellung der Blößen
+\end{itemize}
+
+&
+
+\begin{itemize}
+    \item Abbildung 27: 22.figura
+    \item Abbildung 28: 26.figura
+\end{itemize}
+\end{longtable}
+
+\end{document}
