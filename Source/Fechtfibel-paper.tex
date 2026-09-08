@@ -1,12 +1,14 @@
 \newcommand{\VariantDocumentClass}{
-  \documentclass[10pt, a4paper, twoside]{scrartcl}
+    \documentclass[10pt, a4paper, twoside]{scrartcl}
 }
 
+\newcommand{\VariantAdditionalHeader}{}
+
 \newcommand{\VariantTitlePage}{
-  \newgeometry{inner=4cm, outer=2cm}
-  \maketitle
-  \thispagestyle{empty}
-  \restoregeometry
+    \newgeometry{inner=4cm, outer=2cm}
+    \maketitle
+    \thispagestyle{empty}
+    \restoregeometry
 }
 
 \input{Fechtfibel-core.tex}
