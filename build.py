@@ -24,8 +24,7 @@ def build_variant(name: str) -> Path:
             "-output-directory=../Output",
             source_file.name,
         ],
-        cwd=SOURCE_DIR,
-        check=True,
+        cwd=SOURCE_DIR
     )
 
     pdf_path = OUTPUT_DIR / output_name
